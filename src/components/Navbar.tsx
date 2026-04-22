@@ -1,10 +1,10 @@
 import { Home, Trophy, BookOpen, Laptop, Mic, UserCircleIcon } from "lucide-react";
 import NavLink from "./NavLink";
 import logo from "../assets/logo-full.png"; 
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const Navbar: React.FC = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
     
     const menuItems = [
         { label: "Beranda", href: "/", icon: <Home size={18} /> },
