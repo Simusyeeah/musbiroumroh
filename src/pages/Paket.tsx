@@ -1,5 +1,5 @@
 import Button from "../components/Button";
-import kabahImg from '../assets/kabah.png';
+//import kabahImg from '../assets/kabah.png';
 
 function Paket() {
 
