@@ -1,9 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Navbar from "./components/Navbar";
-import TalkShow from "./pages/TalkShow";
-import Seminar from "./pages/Seminar";
-import Workshop from "./pages/WorkShop";
-import Competition from "./pages/Competition";
+import Kontak from "./pages/kontak";
+import Paket from "./pages/Paket";
 import MainLayout from "./layouts/MainLayouts";
 import RegisterForm from "./pages/RegisterForm";
 import Home from "./pages/Home";
@@ -18,11 +16,10 @@ function App() {
 
         <Routes>
           <Route element= {<MainLayout/>}>
-              <Route path="/" element={<Home />} />
-              <Route path = "/talkshow" element={<TalkShow/>}/>
-              <Route path = "/seminar" element={<Seminar/>}/>
-              <Route path = "/competition" element={<Competition/>}/>
-              <Route path = "/workshop" element={<Workshop/>}/>
+              <Route path="/" element={<Home />} />   
+              <Route path="/kontak" element={<Kontak />} />
+              <Route path = "/Paket" element={<Paket/>}/>
+             
               
               <Route
                 path="/dashboard"
