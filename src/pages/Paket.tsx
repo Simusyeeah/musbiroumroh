@@ -60,7 +60,7 @@ function Paket() {
               Rp {item.price}
             </h3>
 
-            <Button title="Ambil Paket" variant="primary" />
+            <Button label="Ambil Paket" variant="primary" />
           </div>
         ))}
 
@@ -79,7 +79,7 @@ function Paket() {
             </p>
           </div>
 
-          <Button title="Hubungi Kami" variant="primary" />
+          <Button label="Hubungi Kami" variant="primary" />
         </div>
       </div>
 

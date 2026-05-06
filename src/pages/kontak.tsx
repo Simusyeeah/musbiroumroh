@@ -45,7 +45,7 @@ function Kontak() {
               className="border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
             ></textarea>
 
-            <Button title="Kirim Pesan" variant="primary" />
+            <Button label="Kirim Pesan" variant="primary" />
           </form>
 
           {/* ===== INFO KONTAK ===== */}

@@ -56,13 +56,13 @@ export default function RegisterForm() {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <InputText 
                         label="Nama" 
-                        name="nama" 
+                        nama="nama" 
                         register={register} 
                         error={errors.nama?.message} 
                         />
                     <InputText 
                         label="Email" 
-                        name="email" 
+                        nama="email" 
                         register={register} 
                         error={errors.email?.message} 
                         />
@@ -97,7 +97,7 @@ export default function RegisterForm() {
                         register={register} 
                         error={errors.password_confirm?.message} />
                 <div className=" h-20 flex flex-col justify-center items-center">
-                    <Button title="Register" variant="primary" type="submit"/>
+                    <Button label="Register" variant="primary" type="submit"/>
                        <div> 
                          Atau sudah punya akun? <Link to="/login">Masuk disini</Link>
                        </div> 

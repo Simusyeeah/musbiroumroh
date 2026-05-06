@@ -72,7 +72,7 @@ function App() {
               </p>
 
               <div className={`flex gap-4 ${heroShow ? "show animate-up" : ""}`}>
-                <Button title="Lihat Paket" variant="primary" />
+                <Button label ="Lihat Paket" variant="primary" />
                 <Button title="Konsultasi Gratis" variant="outline" />
               </div>
             </div>
@@ -123,7 +123,7 @@ function App() {
           ].map((item, i) => (
             <div key={i} className={`${aboutShow ? "animate-up" : ""}`}>
               <CardProduct title={item.title} description={item.desc}>
-                <Button title="Detail" variant="primary" />
+                <Button label="Detail" variant="primary" />
               </CardProduct>
             </div>
           ))}

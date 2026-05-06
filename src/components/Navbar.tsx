@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
         { label: "Beranda", href: "/", icon: <Home size={18} /> },
         { label: "Paket", href: "/paket", icon: <Trophy size={18} /> },
         { label: "kontak", href: "/kontak", icon: <BookOpen size={18} /> },
-        { label: "Login", href: "/register", icon: <UserCircleIcon size={18} /> }
+        { label: "Login", href: "/login", icon: <UserCircleIcon size={18} /> }
   ];
   const activeStyle = "bg-red-100 text-red-900";
   const defaultStyle = "text-gray-600 hover:text-red-900";

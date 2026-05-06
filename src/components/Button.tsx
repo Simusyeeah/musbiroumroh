@@ -1,20 +1,34 @@
 interface ButtonProps {
-  title: string;
-  variant?: "primary" | "outline";
-  type? : "button" | "submit";
+  label?: string; // ✅ optional
+  title?: string; // ✅ biar support kode lama
+  variant?: "primary" | "secondary" | "outline"; // ✅ tambah outline
+  type?: "button" | "submit";
+  onClick?: () => void;
+  isLoading?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ title, variant = "primary" , type="button"}) => {
-  const baseStyle = "px-5 py-3 rounded-lg font-medium transition ";
+export const Button: React.FC<ButtonProps> = ({
+  label,
+  title,
+  variant = "primary",
+  type = "button",
+  isLoading = false,
+}) => {
+  const baseStyle = "px-4 py-2 rounded font-medium transition";
 
-  const variants = {
-    primary: "bg-red-900 text-white hover:bg-red-800",
-    outline: "border border-red-900 text-red-900 hover:bg-red-100",
+  const varianStyle = {
+    primary: "bg-[#802D43] text-white hover:bg-[#6b2437]",
+    secondary: "border border-[#802D43] text-[#802D43] hover:bg-[#802D43] hover:text-white",
+    outline: "border border-green-600 text-green-600 hover:bg-green-600 hover:text-white",
   };
 
   return (
-    <button type={type} className={`${baseStyle} ${variants[variant]}`}>
-      {title}
+    <button
+      type={type}
+      disabled={isLoading}
+      className={`${baseStyle} ${varianStyle[variant]}`}
+    >
+      {isLoading ? "Loading..." : label || title}
     </button>
   );
 };
