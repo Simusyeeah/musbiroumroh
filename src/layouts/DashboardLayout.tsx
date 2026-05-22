@@ -3,56 +3,51 @@ import { useAuthStore } from "../store/useAuthStore";
 
 export default function DashboardLayout() {
   const logout = useAuthStore((state) => state.logout);
-  const navigate = useNavigate(); // 👈 tambah ini
+  const navigate = useNavigate();
 
   const handleLogout = () => {
-    console.log("Logout clicked"); // opsional debug
     logout();
-    navigate("/login"); // 👈 INI YANG PENTING
+    navigate("/login");
   };
 
   return (
-    <div className="flex w-full min-h-screen">
-      {/* kiri */}
-      <div className="bg-green-200 w-64 flex flex-col justify-between p-4 relative z-10">
-        
+    <div className="flex w-full min-h-screen bg-[#fff7f7]">
+      <div className="w-64 bg-white border-r border-[#f1d6d6] flex flex-col justify-between p-6 shadow-xl">
         <div>
-          <h1 className="font-bold text-2xl text-center text-green-950">
+          <h1 className="font-extrabold text-3xl text-center text-[#8b1e3f]">
             Biromus
           </h1>
-        </div>
 
-        <div>
-          <ul className="flex flex-col gap-6 w-full">
-            <li>
-              <Link to="/dashboard">Dashboard</Link>
-            </li>
-            <li>
-              <Link to="/dashboard/category">Category</Link>
-            </li>
-            <li>
-              <Link to="/dashboard/pembicara">Pembicara</Link>
-            </li>
-            <li>
-              <Link to="/dashboard/event">Event</Link>
-            </li>
+          <ul className="flex flex-col gap-4 w-full mt-16">
+            {[
+              ["Dashboard", "/dashboard"],
+              ["Category", "/dashboard/category"],
+              ["Pembicara", "/dashboard/pembicara"],
+              ["Event", "/dashboard/event"],
+              ["Biodata", "/dashboard/biodata"],
+            ].map(([label, path]) => (
+              <li key={path}>
+                <Link
+                  to={path}
+                  className="block px-5 py-3 rounded-xl text-[#334155] hover:bg-[#fde2e2] hover:text-[#8b1e3f] transition font-semibold"
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
-        <div>
-          <button
-            type="button"
-            onClick={handleLogout}
-            className="w-full p-4 bg-red-800 text-white font-semibold rounded-2xl cursor-pointer hover:bg-red-900"
-          >
-            Logout
-          </button>
-        </div>
-
+        <button
+          type="button"
+          onClick={handleLogout}
+          className="w-full p-4 bg-[#8b1e3f] text-white font-bold rounded-2xl hover:bg-[#6f1732] transition shadow-lg"
+        >
+          Logout
+        </button>
       </div>
 
-      {/* kanan */}
-      <div className="bg-blue-200 p-4 w-full">
+      <div className="bg-[#fff7f7] p-6 w-full">
         <Outlet />
       </div>
     </div>

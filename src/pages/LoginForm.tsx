@@ -33,8 +33,8 @@ export default function LoginForm() {
     console.log("Login Success", data);
 
     if (
-      data.email === "admin@gmail.com" &&
-      data.password === "admin123"
+      data.email === "24090102" &&
+      data.password === "24090102"
     ) {
       alert("Login Berhasil");
 
